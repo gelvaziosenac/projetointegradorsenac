@@ -50,12 +50,14 @@ public class VeiculoController {
 
 		return ResponseEntity.ok().body(cadastro);
 	}
+	
 	@GetMapping("/veiculousuario/{usuario}")
 	@ResponseStatus(HttpStatus.OK)
 	public List<Veiculo> getCadastroByUsuario(@PathVariable(value = "usuario") Long usuario)
 	throws ResourceNotFoundException {
 		return veiculoRepository.findVeiculoByUsuario(usuario);
 	}
+	
 	// Inserir veiculo
 	@PostMapping("/veiculo")
 	@ResponseStatus(HttpStatus.CREATED)

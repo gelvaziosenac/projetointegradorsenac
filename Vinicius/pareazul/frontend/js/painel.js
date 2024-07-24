@@ -415,8 +415,6 @@ function confirmarEstacionamento(veiculo_id){
 
     var saldo = getFloatValue(document.querySelector("#SALDO_USUARIO_LOGADO").textContent);
 
-debugger;
-
     let tempo = 0;
     if(tempo_30_min.checked){
         tempo = 30;
